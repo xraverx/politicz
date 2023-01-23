@@ -111,7 +111,7 @@ class Game:
         """
         Main game loop, present dilemmas and check for the game's end condition until the game is over.
         """
-        while not self.check_loss() and self.turn < 20:
+        while not self.check_loss() and self.turn < 25:
             os.system('cls' if os.name == 'nt' else 'clear') # this line clears the console for better visualization
             self.print_table()
             current_dilemma = random.choice(dilemmas)
@@ -121,7 +121,7 @@ class Game:
                 print(f"{key}: {value}")
             choice = input("Enter your choice: ")
             self.handle_choice(choice, current_dilemma["effects"])
-        if self.turn >=20:
+        if self.turn >=25:
             print("Congratulations! You have won the game.")
 
 # Main function
