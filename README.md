@@ -8,10 +8,21 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You need to have Python 3 and the following module installed:
-- prettytable
+You need to have Python and the prettytable library installed.
 
-Prettytable can be installed by running the following command:
+Prettytable can be installed using the pip package manager. 
+
+To get pip on Debian/Ubuntu:
+```
+sudo apt install python-pip
+```
+
+To get pip on Arch:
+```
+sudo pacman -S python-pip
+```
+
+Then, install prettytable using pip:
 ```
 pip install prettytable
 ```
@@ -25,7 +36,7 @@ git clone https://github.com/xraverx/politicz.git
 
 ### Usage
 
-To run the game, use the commands:
+To run the game, enter the directory and run the politicz.py file:
 ```
 cd politicz
 python3 politicz.py
@@ -47,3 +58,4 @@ This project is licensed under the GPL - see the [LICENSE](LICENSE) file for det
 
 * [ChatGPT](https://chat.openai.com) helped write code and provide inspiration.
 * Main game variables were inspired by the [Democracy](https://www.positech.co.uk/index.html) series.
+* Game mechanics were inspired by the [Reigns](https://www.reignsgame.com/three-kingdoms) game.
