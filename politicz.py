@@ -61,6 +61,7 @@ class Game:
         :param choice: The user's choice (a string)
         :param effects: A dictionary containing the effects of each choice on the variables
         """
+        choice = choice.lower()
         if choice not in effects:
             print("Invalid choice. Please try again.")
             return
