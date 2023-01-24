@@ -143,5 +143,27 @@ dilemmas = [
             "B": {"gdp": -0.1, "crime": -0.1}
         }
     },
+    {
+        "text": "Should your country invest in renewable energy sources or build a new coal-powered plant?",
+        "options": {
+            "A": "Invest in renewable energy sources",
+            "B": "Build a new coal-powered plant"
+        },
+        "effects": {
+            "A": {"gdp": 0.2, "health": 0.2, "foreign_relations": 0.2},
+            "B": {"gdp": 0.2, "health": -0.2, "foreign_relations": -0.2}
+        }
+    },
+    {
+        "text": "The government is considering a new law that would increase taxes to fund a public health program, but it would also reduce the amount of money that businesses have to spend.",
+        "options": {
+            "A": "Increase taxes for the public health program",
+            "B": "Keep the taxes the same"
+        },
+        "effects": {
+            "A": {"health": 0.3, "gdp": -0.2},
+            "B": {"health": -0.1, "gdp": 0.1}
+        }
+    },
     # Add more dilemmas as needed
 ]
