@@ -39,7 +39,7 @@ git clone https://github.com/xraverx/politicz.git
 To run the game, enter the directory and run the politicz.py file:
 ```
 cd politicz
-python3 politicz.py
+python politicz.py
 ```
 
 ## Built With
