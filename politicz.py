@@ -37,8 +37,22 @@ class Game:
             "poverty": {"easy": 0.2, "normal": 0.5, "hard": 0.8},
             "foreign_relations": {"easy": 0.8, "normal": 0.5, "hard": 0.2},
         }
+        self.initial_variables = {}  # new dictionary to store initial variables
         for variable in self.variables:
             setattr(self, variable, self.variables[variable][difficulty])
+            self.initial_variables[variable] = self.variables[variable][difficulty]  # storing initial variables
+
+    def show_differences(self):
+        """
+        Prints the difference between the initial and final values of the variables
+        """
+        table = PrettyTable()
+        table.field_names = ["Variable", "Changes"]
+        for variable in self.variables:
+            display_name = self.VARIABLE_DISPLAY_NAMES.get(variable, variable)
+            difference = round(getattr(self, variable) - self.initial_variables[variable], 1)
+            table.add_row([display_name, difference])
+        print(table)
 
     def handle_choice(self, choice, effects):
         """
@@ -85,24 +99,31 @@ class Game:
         """
         if self.gdp <= 0:
             print("The country's industries and businesses are failing, resulting in a widespread economic crisis. Game over.")
+            self.show_differences()  # calling the method to show the differences
             return True
         elif self.health <= 0:
             print("A major health crisis has emerged and your government's response has been inadequate. Many lives have been lost. Game over.")
+            self.show_differences()  # calling the method to show the differences
             return True
         elif self.education <= 0:
             print("Your country's education system is in a state of disrepair. The youth of your nation are not receiving the education they need. Game over.")
+            self.show_differences()  # calling the method to show the differences
             return True
         elif self.unemployment >= 1:
             print("Your government's economic policies have led to widespread unemployment. Game over.")
+            self.show_differences()  # calling the method to show the differences
             return True
         elif self.crime >= 1:
             print("Crime rates in your country have skyrocketed, and the citizens no longer feel safe. Game over.")
+            self.show_differences()  # calling the method to show the differences
             return True
         elif self.poverty >= 1:
             print("Poverty levels in your country are at an all-time high. Game over.")
+            self.show_differences()  # calling the method to show the differences
             return True
         elif self.foreign_relations <= 0:
             print("Your country's foreign relations have completely broken down. Game over.")
+            self.show_differences()  # calling the method to show the differences
             return True
         else:
             return False
@@ -122,6 +143,7 @@ class Game:
             choice = input("Enter your choice: ")
             self.handle_choice(choice, current_dilemma["effects"])
         if self.turn >=25:
+            self.show_differences()  # calling the method to show the differences
             print("Congratulations! You have won the game.")
 
 # Main function
