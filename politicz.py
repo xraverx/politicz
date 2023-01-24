@@ -164,6 +164,7 @@ class Game:
 
 # Main function
 def main():
+    print("Welcome to Politicz! You are the leader of a country and will have to make decisions that will affect the country's economy, health, education, unemployment, crime, poverty, and foreign relations. Each turn, you will be presented with a dilemma and you will have to choose an action. Your choices will affect the variables and their values will change accordingly. If you reach turn 25, you win. If GDP, Health, Education, or Foreign Relations get below 0, you lose. If Unemployment, Crime, or Poverty get above 1, you lose. Good luck!")
     difficulty = input("Choose a difficulty level (easy = 1, normal = 2, hard = 3): ")
     difficulty_mapping = {"1": "easy", "2": "normal", "3": "hard"}
     difficulty = difficulty_mapping.get(difficulty)
