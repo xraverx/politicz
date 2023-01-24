@@ -98,30 +98,44 @@ class Game:
         Check if any of the variables have reached a critical value, indicating a loss in the game.
         """
         if self.gdp <= 0:
+            os.system('cls' if os.name == 'nt' else 'clear') # this line clears the console for better visualization
+            self.print_table()
             print("The country's industries and businesses are failing, resulting in a widespread economic crisis. Game over.")
             self.show_differences()  # calling the method to show the differences
             return True
         elif self.health <= 0:
+            os.system('cls' if os.name == 'nt' else 'clear') # this line clears the console for better visualization
+            self.print_table()
             print("A major health crisis has emerged and your government's response has been inadequate. Many lives have been lost. Game over.")
             self.show_differences()  # calling the method to show the differences
             return True
         elif self.education <= 0:
+            os.system('cls' if os.name == 'nt' else 'clear') # this line clears the console for better visualization
+            self.print_table()
             print("Your country's education system is in a state of disrepair. The youth of your nation are not receiving the education they need. Game over.")
             self.show_differences()  # calling the method to show the differences
             return True
         elif self.unemployment >= 1:
+            os.system('cls' if os.name == 'nt' else 'clear') # this line clears the console for better visualization
+            self.print_table()
             print("Your government's economic policies have led to widespread unemployment. Game over.")
             self.show_differences()  # calling the method to show the differences
             return True
         elif self.crime >= 1:
+            os.system('cls' if os.name == 'nt' else 'clear') # this line clears the console for better visualization
+            self.print_table()
             print("Crime rates in your country have skyrocketed, and the citizens no longer feel safe. Game over.")
             self.show_differences()  # calling the method to show the differences
             return True
         elif self.poverty >= 1:
+            os.system('cls' if os.name == 'nt' else 'clear') # this line clears the console for better visualization
+            self.print_table()
             print("Poverty levels in your country are at an all-time high. Game over.")
             self.show_differences()  # calling the method to show the differences
             return True
         elif self.foreign_relations <= 0:
+            os.system('cls' if os.name == 'nt' else 'clear') # this line clears the console for better visualization
+            self.print_table()
             print("Your country's foreign relations have completely broken down. Game over.")
             self.show_differences()  # calling the method to show the differences
             return True
@@ -143,6 +157,8 @@ class Game:
             choice = input("Enter your choice: ")
             self.handle_choice(choice, current_dilemma["effects"])
         if self.turn >=25:
+            os.system('cls' if os.name == 'nt' else 'clear') # this line clears the console for better visualization
+            self.print_table()
             self.show_differences()  # calling the method to show the differences
             print("Congratulations! You have won the game.")
 
