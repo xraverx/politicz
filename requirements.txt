@@ -1,2 +1,2 @@
-python
-prettytable
+prettytable==3.6.0
+wcwidth==0.2.6

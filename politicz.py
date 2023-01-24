@@ -67,7 +67,7 @@ class Game:
             return
 
         for var, value in effects[choice].items():
-            setattr(self, var, min(1.000001, max(-0.000001, getattr(self, var) + value)))
+            setattr(self, var, min(1, max(0, getattr(self, var) + value)))
         self.turn += 1
         self.print_table()
 
