@@ -50,7 +50,7 @@ class Game:
         table.field_names = ["Variable", "Changes"]
         for variable in self.variables:
             display_name = self.VARIABLE_DISPLAY_NAMES.get(variable, variable)
-            difference = round(getattr(self, variable) - self.initial_variables[variable], 1)
+            difference = "{:.0%}".format(round(getattr(self, variable) - self.initial_variables[variable], 1))
             table.add_row([display_name, difference])
         print(table)
 
@@ -67,7 +67,7 @@ class Game:
             return
 
         for var, value in effects[choice].items():
-            setattr(self, var, min(1.01, max(-0.01, getattr(self, var) + value)))
+            setattr(self, var, min(1.000001, max(-0.000001, getattr(self, var) + value)))
         self.turn += 1
         self.print_table()
 
@@ -80,7 +80,7 @@ class Game:
         table.field_names = ["Variable", "Value"]
         for variable in self.variables:
             display_name = self.VARIABLE_DISPLAY_NAMES.get(variable, variable)
-            table.add_row([display_name, round(getattr(self, variable), 1)])
+            table.add_row([display_name, "{:.0%}".format(getattr(self, variable))])
         print(table)
 
     def present_dilemma(self):
