@@ -28,7 +28,7 @@ Clone the repository to your local machine and install required python libraries
 ```
 git clone https://github.com/xraverx/politicz.git
 cd politicz
-pip install --requirement requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Usage
