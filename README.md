@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 Then, simply run the politicz.py file:
 ```
-python politicz.py
+python3 politicz.py
 ```
 
 ## Built With
