@@ -14,7 +14,7 @@ Required python libraries can be installed using the pip package manager.
 
 Install pip on Debian/Ubuntu:
 ```
-sudo apt install python-pip
+sudo apt install python3-pip
 ```
 
 Install pip on Arch:
