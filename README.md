@@ -10,21 +10,16 @@ These instructions will get you a copy of the project up and running on your loc
 
 You need to have Python and the prettytable library installed.
 
-Prettytable can be installed using the pip package manager. 
+Required python libraries can be installed using the pip package manager.
 
-To get pip on Debian/Ubuntu:
+Install pip on Debian/Ubuntu:
 ```
 sudo apt install python-pip
 ```
 
-To get pip on Arch:
+Install pip on Arch:
 ```
 sudo pacman -S python-pip
-```
-
-Then, install prettytable using pip:
-```
-pip install prettytable
 ```
 
 ### Installing
@@ -36,9 +31,10 @@ git clone https://github.com/xraverx/politicz.git
 
 ### Usage
 
-To run the game, enter the directory and run the politicz.py file:
+To run the game, enter the directory, install the required libraries using pip, and run the politicz.py file:
 ```
 cd politicz
+pip install -i requirements.txt
 python politicz.py
 ```
 
