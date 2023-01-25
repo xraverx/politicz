@@ -24,17 +24,17 @@ sudo pacman -S python-pip
 
 ### Installing
 
-Clone the repository to your local machine:
+Clone the repository to your local machine and install required python libraries using pip:
 ```
 git clone https://github.com/xraverx/politicz.git
+cd politicz
+pip install -i requirements.txt
 ```
 
 ### Usage
 
-To run the game, enter the directory, install the required libraries using pip, and run the politicz.py file:
+Then, simply run the politicz.py file:
 ```
-cd politicz
-pip install -i requirements.txt
 python politicz.py
 ```
 
