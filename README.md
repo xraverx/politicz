@@ -12,12 +12,12 @@ You need to have Python and the prettytable library installed.
 
 Required python libraries can be installed using the pip package manager.
 
-Install pip on Debian/Ubuntu:
+Install pip using apt:
 ```
 sudo apt install python3-pip
 ```
 
-Install pip on Arch:
+Install pip using pacman:
 ```
 sudo pacman -S python-pip
 ```
