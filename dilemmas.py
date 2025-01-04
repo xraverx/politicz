@@ -1,5 +1,7 @@
-# Dilemmas, options, and the respective impact of each option on variables.
-dilemmas = [
+# dilemmas.py
+# Store dilemmas in a list of dictionaries, or keep them in JSON/YAML if preferred.
+
+dilemmas_data = [
     {
         "text": "A new technology company wants to open a branch in your country, but it would also displace many local businesses.",
         "options": {
@@ -89,81 +91,4 @@ dilemmas = [
         }
     },
     {
-        "text": "A new proposed bill would increase funding for the police force, but it would also lead to a reduction in funding for social services.",
-        "options": {
-            "a": "Support the bill",
-            "b": "Oppose the bill"
-        },
-        "effects": {
-            "a": {"crime": -0.1, "poverty": 0.1},
-            "b": {"crime": 0.1, "poverty": -0.1}
-        }
-    },
-    {
-        "text": "A new free trade agreement is proposed with a neighboring country, but it would also lead to job losses in certain industries.",
-        "options": {
-            "a": "Support the agreement",
-            "b": "Oppose the agreement"
-        },
-        "effects": {
-            "a": {"gdp": 0.2, "unemployment": 0.1},
-            "b": {"gdp": -0.1, "unemployment": -0.1}
-        }
-    },
-    {
-        "text": "A new renewable energy program is proposed to reduce dependence on fossil fuels, but it would also increase energy prices.",
-        "options": {
-            "a": "Implement the program",
-            "b": "Oppose the program"
-        },
-        "effects": {
-            "a": {"gdp": 0.1, "poverty": 0.1},
-            "b": {"gdp": -0.1, "poverty": -0.1}
-        }
-    },
-    {
-        "text": "A new law is proposed to increase regulations on firearms, but it would also restrict citizens' rights to bear arms.",
-        "options": {
-            "a": "Support the law",
-            "b": "Oppose the law"
-        },
-        "effects": {
-            "a": {"crime": -0.2, "poverty": 0.1},
-            "b": {"crime": 0.2, "poverty": -0.1}
-        }
-    },
-    {
-        "text": "A new law is proposed to legalize marijuana, but it would also increase drug-related crime.",
-        "options": {
-            "a": "Support the law",
-            "b": "Oppose the law"
-        },
-        "effects": {
-            "a": {"gdp": 0.2, "crime": 0.1},
-            "b": {"gdp": -0.1, "crime": -0.1}
-        }
-    },
-    {
-        "text": "Should your country invest in renewable energy sources or build a new coal-powered plant?",
-        "options": {
-            "a": "Invest in renewable energy sources",
-            "b": "Build a new coal-powered plant"
-        },
-        "effects": {
-            "a": {"gdp": 0.2, "health": 0.2, "foreign_relations": 0.2},
-            "b": {"gdp": 0.2, "health": -0.2, "foreign_relations": -0.2}
-        }
-    },
-    {
-        "text": "The government is considering a new law that would increase taxes to fund a public health program, but it would also reduce the amount of money that businesses have to spend.",
-        "options": {
-            "a": "Increase taxes for the public health program",
-            "b": "Keep the taxes the same"
-        },
-        "effects": {
-            "a": {"health": 0.3, "gdp": -0.2},
-            "b": {"health": -0.1, "gdp": 0.1}
-        }
-    },
-    # Add more dilemmas as needed
-]
+        "t
